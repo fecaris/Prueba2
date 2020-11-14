@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    {% block extrastatic %}
+    {% endblock %}
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href='/static/css/index.css'>
+   <title>{% block title %}Document {% endblock %}</title>
+</head>
+<body>
+    <br></br>
+    <br></br>
+<div class="container">
+
+
+    {% block content %}
+    <h4>    Bloque de contenido     </h4>
+    {% endblock %}
+
+    {% block footer %}
+    {% endblock%}
+</div>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js%22%3E"</script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    {% block extrajs %}
+    {% endblock %}
+
+<footer id="footer">
+    <div class="container_full">
+      <div class="container_body">
+        <div class="colum1">
+          <h1>Informacion sobre Nuestra pagina</h1>
+          <p>Esta pagina se dedica a mostrar TOP de peliculas por año, asi como mostrar noticias del espectaculo
+            actual.</p>
+        </div>
+        <div class="colum2">
+          <h1>Redes Sociales</h1>
+          <div class="filas">
+            <a href="https://www.facebook.com/" target="_blank"><img src="/static/images/logofacebook.png"  alt="imagen" width="28" height="28"><label>Siguenos en Facebook</label></a>
+          </div>
+          <div class="filas">
+            <a class="instagram" href="https://www.instagram.com/?hl=es-la" target="_blank"><img src="/static/images/logoinsta.png"  width="28" height="28" ><label>Siguenos en Instagram</label></a>
+          </div>
+          <div class="filas">
+            <a class="twitter" href="https://twitter.com/?lang=es" target="_blank"><img src="/static/images/logotwitter.png"  width="28" height="28"><label>Siguenos en Twitter</label></a>          
+          </div>
+          <div class="filas">
+            <a class="pinterest" href="https://www.pinterest.cl/" target="_blank"><img src="/static/images/logopinterest.png"  width="28" height="28"><label>Siguenos en Pinterest</label></a>          
+          </div>
+        </div>
+        <div class="colum3">
+          <h1>Contacto</h1>
+          <div class="filas2">
+            <img src="/static/images/logocasita.png"  width="28" height="28">
+            <label >Sede central en Avenida Siempreviva 742</label>
+          </div>
+          <div class="filas2">
+            <img src="/static/images/logotelefono.png"  width="28" height="28">
+            <label>+569 123456</label>
+          </div>
+          <div class="filas2">
+            <a class="gmail" href="https://www.google.com/intl/es-419/gmail/about/" target="blank"><img src="/static/images/logogmail.png" width="28" height="28"><label>TOPMOVIES@GMAIL.COM</label></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
